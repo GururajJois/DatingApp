@@ -12,7 +12,7 @@ namespace API.Extensions
         {
         services.AddDbContext<DataContext>(opt =>
         {
-             opt.UseSqlite(config.GetConnectionString("DefaultConnectio"));
+             opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
         });
         services.AddCors();
         services.AddScoped<ITokenService, TokenService>();
